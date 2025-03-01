@@ -1,0 +1,46 @@
+[manager]
+cwd = { fg = "#d0c7a2", bold=true}
+
+hovered         = { fg = "#f6e388", bg = "#524600" }
+preview_hovered = { underline = true, bold=true }
+
+
+[status]
+separator_open  = ""
+separator_close = ""
+separator_style = { fg = "#f6e388", bg = "#524600" }
+
+# Mode
+mode_normal = { fg = "#393000",   bg = "#d9c76f", bold = true }
+mode_select = { fg = "#363016", bg = "#d0c7a2", bold = true }
+mode_unset  = { fg = "#133724",  bg = "#a9d0b4", bold = true }
+
+[which]
+mask            = { bg = "#222017" }
+cand            = { fg = "#d9c76f" }
+desc            = { fg = "#d0c7a2" }
+separator       = "  "
+separator_style = { fg = "#a9d0b4" }
+
+[filetype]
+rules = [
+	# Images
+	{ mime = "image/*", fg = "#d0c7a2" },
+
+	# Videos
+	{ mime = "video/*", fg = "#a9d0b4" },
+	{ mime = "audio/*", fg = "#a9d0b4" },
+
+	# Archives
+	{ mime = "application/zip",             fg = "#ffb4ab" },
+	{ mime = "application/gzip",            fg = "#ffb4ab" },
+	{ mime = "application/x-tar",           fg = "#ffb4ab" },
+	{ mime = "application/x-bzip",          fg = "#ffb4ab" },
+	{ mime = "application/x-bzip2",         fg = "#ffb4ab" },
+	{ mime = "application/x-7z-compressed", fg = "#ffb4ab" },
+	{ mime = "application/x-rar",           fg = "#ffb4ab" },
+
+	# Fallback
+	{ name = "*", fg = "#d9c76f", bold=true },
+	{ name = "*/", fg = "#d0c7a2", bold=true }
+]

@@ -1,0 +1,47 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "b659791"
+hash = ""
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:lsar"
+rev = "b659791"
+hash = ""
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:chmod"
+rev = "b659791"
+hash = ""
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:max-preview"
+rev = "49137fe"
+hash = ""
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:hide-preview"
+rev = "49137fe"
+hash = ""
+
+[[plugin.deps]]
+use = "Reledia/miller"
+rev = "40e0265"
+hash = ""
+
+[[plugin.deps]]
+use = "Reledia/glow"
+rev = "5ce76dc"
+hash = "52e5f5c602962e7cbf874da28f52ba45"
+
+[[plugin.deps]]
+use = "dedukun/bookmarks"
+rev = "202e450"
+hash = "9e2f6f7381542d3adb3080b394b431b4"
+
+[[plugin.deps]]
+use = "dawsers/dual-pane"
+rev = "c2fed12"
+hash = "c7c303f806f5bbbdc863f22956876551"
+
+[flavor]
+deps = []
