@@ -35,10 +35,6 @@ output_path = "~/.config/gtk-4.0/colors.css"
 input_path = "~/.config/nvim/pywal/matugen.lua"
 output_path = "~/.cache/wal/base46-dark.lua"
 
-[templates.discord]
-input_path = "~/.config/matugen/templates/discord-colors.theme.css"
-output_path = "~/.config/vesktop/themes/axmat.theme.css"
-
 [templates.pywaljson]
 input_path = "~/.config/matugen/templates/pywal-colors.json"
 output_path = "~/.cache/wal/colors.json"
@@ -48,6 +44,11 @@ post_hook = "pywalfox update &"
 input_path = "~/.config/matugen/templates/colors.sh"
 output_path = "~/.cache/wal/colors.sh"
 post_hook = "walogram -B > /dev/null 2>&1 &"
+
+[templates.tmux]
+input_path = "~/.config/matugen/templates/tmux.sh"
+output_path = "~/.config/tmux/tools/linkarzu/tmux_colors.sh"
+post_hook = "tmux source ~/.config/tmux/tmux.conf"
 
 [templates.pywalwalfile]
 input_path = "~/.config/matugen/templates/wal"
