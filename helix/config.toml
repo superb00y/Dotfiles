@@ -1,9 +1,9 @@
-theme = "base16_terminal"
+theme = "transparent"
 
 [editor]
 line-number = "relative"
 mouse = true
-cursorline = true
+cursorline = false
 cursorcolumn = false
 gutters = ["diff", "diagnostics", "line-numbers", "spacer"]
 auto-completion = true
@@ -13,6 +13,7 @@ bufferline = "always"
 color-modes = true
 true-color = true
 undercurl = true
+end-of-line-diagnostics = "hint"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -28,16 +29,23 @@ character = "┇"
 skip-levels = 1
 
 [editor.lsp]
+enable= true
 display-messages = true
+display-progress-messages = true
 display-inlay-hints = true
 auto-signature-help = true
+display-signature-help-docs = true
+snippets = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning" # show warnings and errors on the cursorline inline
 
 [editor.statusline]
 left = ["mode", "spinner", "file-name", "file-modification-indicator"]
 center = ["diagnostics", "workspace-diagnostics"]
 right = [
   "selections",
-  "position",
+  # "position",
   "file-type",
 ]
 mode.normal = ""
@@ -119,6 +127,7 @@ w = ":w"
 q = ":q"
 f = "file_picker"
 b = "buffer_picker"
+c = ":bc"
 h = "select_prev_sibling"
 l = "select_next_sibling"
 k = "expand_selection"
@@ -129,7 +138,6 @@ d = "hover"
 s = "split_selection_on_newline"
 m = { g = "goto_definition" }
 "/" = "global_search"
-c = "toggle_comments"
 
 [keys.normal]
 # Quick iteration on config changes
