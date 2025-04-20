@@ -1,8 +1,33 @@
 <p align="center">
+<a href="https://github.com/Axenide/Ax-Shell">
   <img src="assets/cover.png">
+  </a>
 </p>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Activity/Sparkles.webp" alt="Sparkles" width="25" height="25" /> <sup>A ʜᴀᴄᴋᴀʙʟᴇ sʜᴇʟʟ ꜰᴏʀ Hʏᴘʀʟᴀɴᴅ, ᴘᴏᴡᴇʀᴇᴅ ʙʏ <a href="https://github.com/Fabric-Development/fabric/">Fᴀʙʀɪᴄ</a>. </sup><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Activity/Sparkles.webp" alt="Sparkles" width="25" height="25" /></p>
+<p align="center">
+  <sub><sup><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Activity/Sparkles.webp" alt="Sparkles" width="25" height="25"/></sup></sub>
+  <a href="https://github.com/hyprwm/Hyprland">
+    <img src="https://img.shields.io/badge/A%20hackable%20shell%20for-Hyprland-0092CD?style=for-the-badge&logo=linux&color=0092CD&logoColor=D9E0EE&labelColor=000000" alt="A hackable shell for Hyprland">
+  </a>
+  <a href="https://github.com/Fabric-Development/fabric/">
+    <img src="https://img.shields.io/badge/Powered%20by-Fabric-FAFAFA?style=for-the-badge&logo=python&color=FAFAFA&logoColor=D9E0EE&labelColor=000000" alt="Powered by Fabric">
+  <sub><sup><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Activity/Sparkles.webp" alt="Sparkles" width="25" height="25"/></sup></sub>
+  </a>
+  </p>
+
+  <p align="center">
+  <a href="https://github.com/Axenide/Ax-Shell/stargazers">
+    <img src="https://img.shields.io/github/stars/Axenide/Ax-Shell?style=for-the-badge&logo=github&color=E3B341&logoColor=D9E0EE&labelColor=000000" alt="GitHub stars">
+  </a>
+  <a href="https://ko-fi.com/Axenide">
+    <img src="https://img.shields.io/badge/Support me on-Ko--fi-FF6433?style=for-the-badge&logo=kofi&logoColor=white&labelColor=000000" alt="Ko-Fi">
+  </a>
+  <a href="https://discord.com/invite/gHG9WHyNvH">
+    <img src="https://img.shields.io/discord/669048311034150914?style=for-the-badge&logo=discord&logoColor=D9E0EE&labelColor=000000&color=5865F2&label=Discord" alt="Discord">
+  </a>
+</p>
+
+---
 
 <h2><sub><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Camera%20with%20Flash.png" alt="Camera with Flash" width="25" height="25" /></sub> Screenshots</h2>
 <table align="center">
@@ -17,25 +42,7 @@
   </tr>
 </table>
 
-<table align="center">
-  <tr>
-    <td align="center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Activity/Sparkles.webp" alt="Sparkles" width="16" height="16" /><sup> sᴜᴘᴘᴏʀᴛ ᴛʜᴇ ᴘʀᴏᴊᴇᴄᴛ </sup><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Activity/Sparkles.webp" alt="Sparkles" width="16" height="16" /></td>
-  </tr>
-  <tr>
-    <td align="center">
-      <a href='https://ko-fi.com/Axenide' target='_blank'>
-        <img style='border:0px;height:128px;' 
-             src='https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3N4NzlvZWs2Z2tsaGx4aHgwa3UzMWVpcmNwZTNraTM2NW84ZDlqbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/PaF9a1MpqDzovyqVKj/giphy.gif' 
-             border='0' alt='Support me on Ko-fi!' />
-      </a>
-    </td>
-  </tr>
-</table>
-
 <h2><sub><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Package.png" alt="Package" width="25" height="25" /></sub> Installation</h2>
-
-> [!CAUTION]
-> PRE-RELEASE STATE. USABLE BUT INCOMPLETE.
 
 > [!NOTE]
 > You need a functioning Hyprland installation.
@@ -56,20 +63,37 @@ curl -fsSL https://raw.githubusercontent.com/Axenide/Ax-Shell/main/install.sh | 
     - [fabric-cli](https://github.com/Fabric-Development/fabric-cli)
     - [Gray](https://github.com/Fabric-Development/gray)
     - [Matugen](https://github.com/InioX/matugen)
+    - `brightnessctl`
+    - `cava`
+    - `cliphist`
     - `gnome-bluetooth-3.0`
+    - `gobject-introspection`
+    - `gpu-screen-recorder`
     - `grimblast`
     - `hypridle`
     - `hyprlock`
     - `hyprpicker`
+    - `hyprsunset`
     - `imagemagick`
     - `libnotify`
+    - `noto-fonts-emoji`
+    - `playerctl`
+    - `swappy`
     - `swww`
+    - `tesseract`
+    - `tmux`
     - `uwsm`
-    - `vte3`
+    - `wl-clipboard`
+    - `wlinhibit`
     - Python dependencies:
+        - ijson
+        - numpy
         - pillow
-        - toml
+        - psutil
+        - requests
         - setproctitle
+        - toml
+        - watchdog
     - Fonts (automated on first run):
         - Zed Sans
         - Tabler Icons
@@ -83,24 +107,48 @@ curl -fsSL https://raw.githubusercontent.com/Axenide/Ax-Shell/main/install.sh | 
 <h2><sub><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="25" height="25" /></sub> Roadmap</h2>
 
 - [x] App Launcher
-- [x] Power Menu
-- [x] Wallpaper Selector
-- [x] System Tray
-- [x] Notifications
-- [x] Terminal
-- [x] Pins
-- [x] Kanban Board
-- [x] Calendar (Incomplete)
-- [x] Color Picker
-- [ ] Dashboard
-- [ ] Network Manager
 - [x] Bluetooth Manager
-- [ ] Power Manager
+- [x] Calculator
+- [x] Calendar
+- [x] Clipboard Manager
+- [x] Color Picker
+- [x] Customizable UI
+- [x] Dashboard
+- [x] Dock
+- [x] Emoji Picker
+- [x] Kanban Board
+- [x] Notifications
+- [x] OCR
+- [x] Pins
+- [x] Power Manager
+- [x] Power Menu
+- [x] Screen Recorder
+- [x] Screenshot
 - [x] Settings
-- [ ] Screenshot Tool
-- [ ] Screen Recorder
-- [ ] Clipboard Manager
-- [ ] Dock
+- [x] System Tray
+- [x] Terminal
+- [x] Tmux Session Manager
+- [x] Vertical Layout
+- [x] Wallpaper Selector
 - [x] Workspaces Overview
+- [ ] Multi-monitor support
 - [ ] Multimodal AI Assistant
-- [ ] Vertical Layout
+- [ ] Network Manager
+- [ ] OTP Manager
+
+---
+
+<table align="center">
+  <tr>
+    <td align="center"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Activity/Sparkles.webp" alt="Sparkles" width="16" height="16" /><sup> sᴜᴘᴘᴏʀᴛ ᴛʜᴇ ᴘʀᴏᴊᴇᴄᴛ </sup><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Activity/Sparkles.webp" alt="Sparkles" width="16" height="16" /></td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href='https://ko-fi.com/Axenide' target='_blank'>
+        <img style='border:0px;height:128px;'
+             src='https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3N4NzlvZWs2Z2tsaGx4aHgwa3UzMWVpcmNwZTNraTM2NW84ZDlqbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/PaF9a1MpqDzovyqVKj/giphy.gif'
+             border='0' alt='Support me on Ko-fi!' />
+      </a>
+    </td>
+  </tr>
+</table>

@@ -1,11 +1,22 @@
 #notch-box {
-  margin: 10px;
-  margin-top: 0px;
-  transition: all 0.5s cubic-bezier(0.5, 0.25, 0, 1);
+  margin: 0 60px 10px 60px;
 }
 
 #notch-box.hidden {
   opacity: 0;
+}
+
+#notch-wrap {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#notch-wrap.occluded {
+  margin-top: -38px;
+}
+
+#notch-wrap.occluded #notch-box {
+  opacity: 0;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #notch-box.hideshow {
@@ -18,10 +29,12 @@
   min-height: 40px;
   min-width: 256px;
   border-radius: 0 0 20px 20px;
-  transition: all 0.5s cubic-bezier(0.5, 0.25, 0, 1.25);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-#notch-content.launcher {
+#notch-content.launcher,
+#notch-content.tmux,
+#notch-content.cliphist {
   padding: 16px;
   min-height: 220px;
   min-width: 480px;
@@ -30,22 +43,8 @@
 
 #notch-content.dashboard {
   padding: 16px;
-  min-height: 358px;
-  min-width: 820px;
-  border-radius: 0 0 36px 36px;
-}
-
-#notch-content.wallpapers {
-  padding: 16px;
-  min-height: 420px;
-  min-width: 620px;
-  border-radius: 0 0 36px 36px;
-}
-
-#notch-content.notification {
-  padding: 16px;
-  min-height: 45px;
-  min-width: 360px;
+  min-height: 450px;
+  min-width: 1070px;
   border-radius: 0 0 36px 36px;
 }
 
@@ -56,27 +55,35 @@
   border-radius: 0 0 36px 36px;
 }
 
-#notch-content.power {
-  padding: 16px;
-  min-height: 52px;
-  min-width: 276px;
+#notch-content.tools {
+  min-height: 84px;
+  min-width: 632px;
+  /* Changed to include pomodoro btn */
   border-radius: 0 0 36px 36px;
 }
 
-#notch-content.bluetooth {
+#notch-content.emoji {
   padding: 16px;
-  min-height: 464px;
-  min-width: 604px;
+  min-height: 238px;
+  min-width: 574px;
+  border-radius: 0 0 36px 36px;
+}
+
+#notch-content.power {
+  min-height: 84px;
+  min-width: 308px;
   border-radius: 0 0 36px 36px;
 }
 
 #app-launcher,
 #dashboard,
-#wallpapers,
 #notification,
 #overview,
+#emoji,
 #power-menu,
-#bluetooth {
+#toolbox,
+#tmux-manager,
+#clip-history {
   opacity: 1;
   margin: -800px;
   transition: all 0.25s cubic-bezier(0.5, 0.25, 0, 1);
@@ -84,29 +91,22 @@
 
 #app-launcher.open,
 #dashboard.open,
-#wallpapers.open,
-#wallpapers-viewport.open,
 #notification.open,
 #overview.open,
+#emoji.open,
 #power-menu.open,
-#bluetooth.open {
+#toolbox.open,
+#bluetooth.open,
+#tmux-manager.open,
+#clip-history.open {
   opacity: 1;
   margin: 0px;
 }
 
 #notch-compact {
   font-weight: bold;
-  border-radius: 0 0 20px 20px;
-  transition: all 0.1s ease;
-}
-
-#notch-compact:hover {
-  background: linear-gradient(
-    to bottom,
-    var(--shadow) 50%,
-    var(--surface) 95%,
-    var(--primary) 95%
-  );
+  transition: all 0.5s cubic-bezier(0.5, 0.25, 0, 1.25);
+  padding: 10px;
 }
 
 #notch-corner-left {
@@ -115,4 +115,45 @@
 
 #notch-corner-right {
   margin-right: -16px;
+}
+
+#compact-mpris-icon-label {
+  color: var(--primary);
+}
+
+#compact-mpris-icon-label,
+#compact-mpris-button-label {
+  font-size: 20px;
+}
+
+#compact-mpris-icon,
+#compact-mpris-button {
+  margin: 0 10px;
+}
+
+#compact-mpris-icon:hover,
+#compact-mpris-button:hover {
+  background-color: var(--primary);
+}
+
+#compact-mpris-icon:active,
+#compact-mpris-button:active {
+  background-color: var(--primary);
+}
+
+#compact-mpris-icon:hover #compact-mpris-icon-label,
+#compact-mpris-button:hover #compact-mpris-button-label {
+  color: var(--background);
+}
+
+#hyprland-window label {
+  margin: 0px 8px;
+}
+
+#active-window-box {
+  margin: 10px;
+}
+
+#vert-comp {
+  min-width: 40px;
 }
