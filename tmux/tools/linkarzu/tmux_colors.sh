@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
-color0=#200e0c
-color1=#ff7c6a
-color2=#ff8777
-color3=#ff9284
-color4=#ff9e91
-color5=#ffa99d
-color6=#ffb4aa
-color7=#e9bcb6
-color8=#5f3f3a
-color9=#ffa295
-color10=#ffada2
-color11=#ffb8af
-color12=#ffc4bc
-color13=#ffcfc8
-color14=#ffdad5
-color15=#ffdad5
+color0=#131313
+color1=#95afa5
+color2=#9cb4ac
+color3=#a3bab2
+color4=#aabfb8
+color5=#b2c5be
+color6=#b9cac4
+color7=#c2c8c5
+color8=#424846
+color9=#adcec3
+color10=#b5d3c8
+color11=#bdd8ce
+color12=#c5dcd4
+color13=#cde1da
+color14=#d5e6e0
+color15=#e4e2e1
 
 

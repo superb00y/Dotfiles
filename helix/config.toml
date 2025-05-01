@@ -21,7 +21,7 @@ normal = "block"
 select = "underline"
 
 [editor.soft-wrap]
-enable = true
+enable = false
 
 [editor.indent-guides]
 render = true

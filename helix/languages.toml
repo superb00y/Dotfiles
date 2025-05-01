@@ -168,7 +168,7 @@ shebangs = ["node"]
 roots = ["package.json"]
 language-servers = [ "typescript-language-server", "eslint", "emmet-ls", "biome"]
 auto-format = true
-formatter = { command = "biome", args = ["format", "--stdin-file-path", "a.js"] }
+formatter = { command = "prettier", args = ["--parser", "javascript"] }
 
 [[language]]
 name = "jsx"
@@ -213,8 +213,9 @@ name = "html"
 scope = "text.html"
 file-types = ["html"]
 roots = ["package.json"]
-language-servers = [ "emmet-ls", "vscode-html-language-server", "vscode-css-language-server", "tailwindcss-ls" ]
+language-servers = [ "emmet-ls", "vscode-html-language-server", "vscode-css-language-server" ]
 auto-format = true
+# formatter = { command = "prettier", args = ["--parser", "jinja-template", "--stdin-filepath", "{0}"] }
 formatter = { command = "prettier", args = ["--parser", "html"] }
 
 [[language]]

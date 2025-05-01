@@ -1,12 +1,15 @@
-inherits = "ayu_dark"
+inherits = "dracula"
 "ui.background" ={}
 
+
+"comment" = { fg = "cyan", bg = "black", modifiers = ["bold"] }
+
 "markup.heading" = { modifiers = ["hidden"] }
-"markup.heading.1" = { fg = "black", bg = "light-red", modifiers = ["bold"] }
-"markup.heading.2" = { fg = "black", bg = "light-green", modifiers = ["bold"] }
-"markup.heading.3" = { fg = "black", bg = "light-yellow", modifiers = ["bold"] }
-"markup.heading.4" = { fg = "black", bg = "light-blue", modifiers = ["bold"] }
-"markup.heading.5" = { fg = "black", bg = "light-magenta", modifiers = ["bold"] }
-"markup.heading.6" = { fg = "black", bg = "light-cyan", modifiers = ["bold"] }
+"markup.heading.1" = { fg = "black", bg = "red", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "black", bg = "green", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "black", bg = "yellow", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "black", bg = "blue", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "black", bg = "magenta", modifiers = ["bold"] }
+"markup.heading.6" = { fg = "black", bg = "cyan", modifiers = ["bold"] }
 
 
