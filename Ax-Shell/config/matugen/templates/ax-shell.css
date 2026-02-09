@@ -15,7 +15,8 @@
   --on-error: {{colors.on_error.default.hex}};
   --error-container: {{colors.error_container.default.hex}};
   --outline: {{colors.outline.default.hex}};
-  --shadow: {{colors.shadow.default.hex}};
+  /* --shadow: {{colors.shadow.default.hex}}; */
+  --shadow: {{colors.background.default.hex | set_lightness: 10.0}};
   --red: {{colors.red.default.hex}};
   --red-dim: {{colors.red.default.hex | set_lightness: -10.0}};
   --green: {{colors.green.default.hex}};

@@ -14,6 +14,9 @@ color-modes = true
 true-color = true
 undercurl = true
 end-of-line-diagnostics = "hint"
+indent-heuristic = "tree-sitter"
+preview-completion-insert = true
+completion-replace = true
 
 [editor.cursor-shape]
 insert = "bar"

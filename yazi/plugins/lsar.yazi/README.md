@@ -10,7 +10,7 @@ but we strongly discourage using it unless you encounter some issues with `7zip`
 ## Installation
 
 ```sh
-ya pack -a yazi-rs/plugins:lsar
+ya pkg add yazi-rs/plugins:lsar
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ mime = "application/{,g}zip"
 run  = "lsar"
 
 [[plugin.prepend_previewers]]
-mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}"
+mime = "application/{tar,bzip*,7z*,xz,rar}"
 run  = "lsar"
 ```
 

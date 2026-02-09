@@ -49,7 +49,7 @@ if os.path.exists(CONFIG_FILE):
     VERTICAL = config.get("vertical", False)  # Use saved value or False as default
     CENTERED_BAR = config.get("centered_bar", False)  # Load centered bar setting
     TERMINAL_COMMAND = config.get(
-        "terminal_command", "kitty -e"
+        "terminal_command", "ghostty"
     )  # Load terminal command
     DOCK_ENABLED = config.get("dock_enabled", True)  # Load dock visibility setting
     DOCK_ALWAYS_OCCLUDED = config.get(

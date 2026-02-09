@@ -69,7 +69,7 @@ class Notch(Window):
 
         self.applet_stack = self.dashboard.widgets.applet_stack
         self.nhistory = self.applet_stack.get_children()[0]
-        self.btdevices = self.applet_stack.get_children()[1]
+        # self.btdevices = self.applet_stack.get_children()[1]
 
         self.window_label = Label(
             name="notch-window-label",
@@ -461,79 +461,6 @@ class Notch(Window):
             self._is_notch_open = True
 
             return
-
-        # Handle special behavior for "bluetooth"
-        if widget == "bluetooth":
-            # If dashboard is already open
-            if self.stack.get_visible_child() == self.dashboard:
-                # If we're in the widgets section and btdevices is already visible, close the notch
-                if (
-                    self.dashboard.stack.get_visible_child() == self.dashboard.widgets
-                    and self.applet_stack.get_visible_child() == self.btdevices
-                ):
-                    self.close_notch()
-                    return
-                # If we're in the widgets section but not on btdevices, switch to btdevices
-                elif self.dashboard.stack.get_visible_child() == self.dashboard.widgets:
-                    self.applet_stack.set_transition_duration(250)
-                    self.applet_stack.set_visible_child(self.btdevices)
-                    return
-                # If we're in another dashboard section, switch to widgets and btdevices
-                else:
-                    self.dashboard.go_to_section("widgets")
-                    self.applet_stack.set_transition_duration(250)
-                    self.applet_stack.set_visible_child(self.btdevices)
-                    return
-            else:
-                # Open dashboard with btdevices visible
-                self.set_keyboard_mode("exclusive")
-
-                if self.hidden:
-                    self.notch_box.remove_style_class("hidden")
-                    self.notch_box.add_style_class("hideshow")
-
-                for style in [
-                    "launcher",
-                    "dashboard",
-                    "notification",
-                    "overview",
-                    "emoji",
-                    "power",
-                    "tools",
-                ]:
-                    self.stack.remove_style_class(style)
-                for w in [
-                    self.launcher,
-                    self.dashboard,
-                    self.overview,
-                    self.emoji,
-                    self.power,
-                    self.tools,
-                ]:
-                    w.remove_style_class("open")
-
-                self.stack.add_style_class("dashboard")
-                self.applet_stack.set_transition_duration(0)
-                self.stack.set_transition_duration(0)
-                self.stack.set_visible_child(self.dashboard)
-                self.dashboard.add_style_class("open")
-                self.dashboard.go_to_section(
-                    "widgets"
-                )  # Ensure we're on widgets section
-                self.applet_stack.set_visible_child(self.btdevices)
-                self._is_notch_open = True
-                GLib.timeout_add(
-                    10,
-                    lambda: [
-                        self.stack.set_transition_duration(100),
-                        self.applet_stack.set_transition_duration(250),
-                    ][-1]
-                    or False,
-                )
-
-                self.bar.revealer_right.set_reveal_child(False)
-                self.bar.revealer_left.set_reveal_child(False)
-                return
 
         # Handle the "dashboard" case
         if widget == "dashboard":

@@ -61,8 +61,6 @@ DEFAULTS = {
     "suffix_axmsg": "A",
     "prefix_dash": "SUPER",
     "suffix_dash": "D",
-    "prefix_bluetooth": "SUPER",
-    "suffix_bluetooth": "B",
     "prefix_pins": "SUPER",
     "suffix_pins": "Q",
     "prefix_kanban": "SUPER",
@@ -90,7 +88,7 @@ DEFAULTS = {
     "wallpapers_dir": WALLPAPERS_DIR_DEFAULT,
     "prefix_restart_inspector": "SUPER CTRL ALT",
     "suffix_restart_inspector": "B",
-    "vertical": False,
+    "vertical": True,
     "centered_bar": False,
     "terminal_command": "kitty -e",
     "dock_enabled": True,
@@ -293,7 +291,7 @@ def generate_hyprconf() -> str:
     Generate the Hypr configuration string using the current bind_vars.
     """
     home = os.path.expanduser("~")
-    return f"""exec-once = uwsm-app $(python {home}/.config/{APP_NAME_CAP}/main.py)
+    return f"""exec-once = uwsm-app $(bash {home}/.config/{APP_NAME_CAP}/launch.sh)
 exec = pgrep -x "hypridle" > /dev/null || uwsm app -- hypridle
 exec = uwsm app -- swww-daemon
 exec-once =  wl-paste --type text --watch cliphist store
@@ -302,10 +300,9 @@ exec-once =  wl-paste --type image --watch cliphist store
 $fabricSend = fabric-cli exec {APP_NAME}
 $axMessage = notify-send "Axenide" "What are you doing?" -i "{home}/.config/{APP_NAME_CAP}/assets/ax.png" -a "Source Code" -A "Be patient. 🍙"
 
-bind = {bind_vars['prefix_restart']}, {bind_vars['suffix_restart']}, exec, killall {APP_NAME}; uwsm-app $(python {home}/.config/{APP_NAME_CAP}/main.py) # Reload {APP_NAME_CAP} | Default: SUPER ALT + B
+bind = {bind_vars['prefix_restart']}, {bind_vars['suffix_restart']}, exec, killall {APP_NAME}; uwsm-app $(bash {home}/.config/{APP_NAME_CAP}/launch.sh) # Reload {APP_NAME_CAP} | Default: SUPER ALT + B
 bind = {bind_vars['prefix_axmsg']}, {bind_vars['suffix_axmsg']}, exec, $axMessage # Message | Default: SUPER + A
 bind = {bind_vars['prefix_dash']}, {bind_vars['suffix_dash']}, exec, $fabricSend 'notch.open_notch("dashboard")' # Dashboard | Default: SUPER + D
-bind = {bind_vars['prefix_bluetooth']}, {bind_vars['suffix_bluetooth']}, exec, $fabricSend 'notch.open_notch("bluetooth")' # Bluetooth | Default: SUPER + B
 bind = {bind_vars['prefix_pins']}, {bind_vars['suffix_pins']}, exec, $fabricSend 'notch.open_notch("pins")' # Pins | Default: SUPER + Q
 bind = {bind_vars['prefix_kanban']}, {bind_vars['suffix_kanban']}, exec, $fabricSend 'notch.open_notch("kanban")' # Kanban | Default: SUPER + N
 bind = {bind_vars['prefix_launcher']}, {bind_vars['suffix_launcher']}, exec, $fabricSend 'notch.open_notch("launcher")' # App Launcher | Default: SUPER + R
@@ -326,8 +323,6 @@ bind = {bind_vars['prefix_restart_inspector']}, {bind_vars['suffix_restart_inspe
 source = {home}/.config/{APP_NAME_CAP}/config/hypr/colors.conf
 
 layerrule = noanim, fabric
-
-exec = cp $wallpaper ~/.current.wall
 
 general {{
     col.active_border = 0xff$primary
