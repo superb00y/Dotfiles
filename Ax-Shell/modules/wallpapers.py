@@ -94,8 +94,8 @@ class WallpaperSelector(Box):
         self.search_entry.connect("focus-out-event", self.on_search_entry_focus_out)
 
         self.schemes = {
-            "scheme-tonal-spot": "Tonal Spot",
             "scheme-content": "Content",
+            "scheme-tonal-spot": "Tonal Spot",
             "scheme-expressive": "Expressive",
             "scheme-fidelity": "Fidelity",
             "scheme-fruit-salad": "Fruit Salad",
@@ -214,11 +214,13 @@ class WallpaperSelector(Box):
         os.symlink(full_path, current_wall)
         if self.matugen_switcher.get_active():
             # Matugen is enabled: run the normal command.
-            exec_shell_command_async(f"matugen image {full_path} -t {selected_scheme}")
+            exec_shell_command_async(
+                f"matugen image {full_path} -t {selected_scheme} --prefer darkness"
+            )
         else:
             # Matugen is disabled: run the alternative swww command.
             exec_shell_command_async(
-                f"swww img {full_path} -t outer --transition-duration 1.5 --transition-step 255 --transition-fps 60 -f Nearest"
+                f"awww img --transition-type outer --transition-step 255 --transition-fps 60 -f Nearest {full_path}"
             )
 
     def on_scheme_changed(self, combo):
