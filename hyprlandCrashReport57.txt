@@ -1,0 +1,138 @@
+--------------------------------------------
+   Hyprland Crash Report
+--------------------------------------------
+All these computers...
+
+Hyprland received signal 11(SEGV)
+Version: 39d7e209c79d451efab1b21151d5938289da838d
+Tag: v0.55.2
+Date: Sat May 16 12:59:19 2026
+Flags:
+
+System info:
+	System name: Linux
+	Node name: archlinux
+	Release: 7.0.9-arch2-1
+	Version: #1 SMP PREEMPT_DYNAMIC Fri, 22 May 2026 19:25:09 +0000
+
+GPU:
+	00:02.0 VGA compatible controller [0300]: Intel Corporation Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller [8086:0402] (rev 06) (prog-if 00 [VGA controller])
+
+
+os-release:
+	NAME="Arch Linux"
+	PRETTY_NAME="Arch Linux"
+	ID=arch
+	BUILD_ID=rolling
+	ANSI_COLOR="38;2;23;147;209"
+	HOME_URL="https://archlinux.org/"
+	DOCUMENTATION_URL="https://wiki.archlinux.org/"
+	SUPPORT_URL="https://bbs.archlinux.org/"
+	BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"
+	PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
+	LOGO=archlinux-logo
+
+Libraries:
+Hyprgraphics: built against 0.5.1, system has 0.5.1
+Hyprutils: built against 0.13.1, system has 0.13.1
+Hyprcursor: built against 0.1.13, system has 0.1.13
+Hyprlang: built against 0.6.8, system has 0.6.8
+Aquamarine: built against 0.11.0, system has 0.11.0
+
+Backtrace:
+	# | Hyprland(_Z12getBacktracev+0x73) [0x558a8c081c73]
+		getBacktrace()
+		??:?
+	#1 | Hyprland(_ZN13CrashReporter18createAndSaveCrashEi+0xc8c) [0x558a8bfc925c]
+		CrashReporter::createAndSaveCrash(int)
+		??:?
+	#2 | Hyprland(+0x3bbede) [0x558a8be8cede]
+		void std::println<>(_IO_FILE*, std::basic_format_string<char>)
+		??:?
+	#3 | /usr/lib/libc.so.6(+0x3e8f0) [0x7fd8b9e3e8f0]
+		??
+		??:0
+	#4 | Hyprland(+0x24a962) [0x558a8bd1b962]
+		std::__throw_bad_variant_access(unsigned int)
+		??:?
+	#5 | Hyprland(_ZN6Render2GL15CGLRenderbufferD0Ev+0x15) [0x558a8c51fc45]
+		Render::GL::CGLRenderbuffer::~CGLRenderbuffer()
+		??:?
+	#6 | Hyprland(_ZN6Render13IHyprRenderer23getOrCreateRenderbufferEN9Hyprutils6Memory14CSharedPointerIN10Aquamarine7IBufferEEEj+0x106) [0x558a8c4be3c6]
+		Render::IHyprRenderer::getOrCreateRenderbuffer(Hyprutils::Memory::CSharedPointer<Aquamarine::IBuffer>, unsigned int)
+		??:?
+	#7 | Hyprland(_ZN15CPointerManager20renderHWCursorBufferEN9Hyprutils6Memory14CSharedPointerINS_20SMonitorPointerStateEEENS2_IN6Render8ITextureEEE+0x1220) [0x558a8c19f020]
+		CPointerManager::renderHWCursorBuffer(Hyprutils::Memory::CSharedPointer<CPointerManager::SMonitorPointerState>, Hyprutils::Memory::CSharedPointer<Render::ITexture>)
+		??:?
+	#8 | Hyprland(_ZN15CPointerManager21attemptHardwareCursorEN9Hyprutils6Memory14CSharedPointerINS_20SMonitorPointerStateEEE+0x231) [0x558a8c1a0951]
+		CPointerManager::attemptHardwareCursor(Hyprutils::Memory::CSharedPointer<CPointerManager::SMonitorPointerState>)
+		??:?
+	#9 | Hyprland(_ZN15CPointerManager19updateCursorBackendEv+0x5ca) [0x558a8c1a145a]
+		CPointerManager::updateCursorBackend()
+		??:?
+	#1 | Hyprland(_ZN15CPointerManager15setCursorBufferEN9Hyprutils6Memory14CSharedPointerIN10Aquamarine7IBufferEEERKNS0_4Math8Vector2DERKf+0xb4) [0x558a8c1a1c14]
+		CPointerManager::setCursorBuffer(Hyprutils::Memory::CSharedPointer<Aquamarine::IBuffer>, Hyprutils::Math::Vector2D const&, float const&)
+		??:?
+	#11 | Hyprland(_ZN14CCursorManager15setCursorBufferEN9Hyprutils6Memory14CSharedPointerI13CCursorBufferEERKNS0_4Math8Vector2DERKf+0x9c) [0x558a8c1753dc]
+		CCursorManager::setCursorBuffer(Hyprutils::Memory::CSharedPointer<CCursorBuffer>, Hyprutils::Math::Vector2D const&, float const&)
+		??:?
+	#12 | Hyprland(_ZN14CCursorManager17setCursorFromNameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE+0x1b1) [0x558a8c1780b1]
+		CCursorManager::setCursorFromName(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+		??:?
+	#13 | Hyprland(_ZN13CInputManager16mouseMoveUnifiedEjbbSt8optionalIN9Hyprutils4Math8Vector2DEE+0x28bd) [0x558a8c2163fd]
+		CInputManager::mouseMoveUnified(unsigned int, bool, bool, std::optional<Hyprutils::Math::Vector2D>)
+		??:?
+	#14 | Hyprland(_ZN11CCompositor12onNewMonitorEN9Hyprutils6Memory14CSharedPointerIN10Aquamarine7IOutputEEE+0xbbd) [0x558a8bea995d]
+		CCompositor::onNewMonitor(Hyprutils::Memory::CSharedPointer<Aquamarine::IOutput>)
+		??:?
+	#15 | Hyprland(_ZN11CCompositor10initServerENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi+0x14dc) [0x558a8beab46c]
+		CCompositor::initServer(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int)
+		??:?
+	#16 | Hyprland(main+0x170e) [0x558a8bd45b2e]
+		main
+		??:?
+	#17 | /usr/lib/libc.so.6(+0x27741) [0x7fd8b9e27741]
+		??
+		??:0
+	#18 | /usr/lib/libc.so.6(__libc_start_main+0x89) [0x7fd8b9e27879]
+		??
+		??:0
+	#19 | Hyprland(_start+0x25) [0x558a8be76e45]
+		_start
+		??:?
+
+
+Log tail:
+DEBUG from aquamarine ]: GBM: Allocated a new buffer with size [Vector2D: x: 1600, y: 900] and format XR24 with modifier 0x100000000000001 : X_TILED
+DEBUG from aquamarine ]: GBM: Allocated a new buffer with size [Vector2D: x: 1600, y: 900] and format XR24 with modifier 0x100000000000001 : X_TILED
+DEBUG from aquamarine ]: Swapchain: Reconfigured a swapchain to [Vector2D: x: 1600, y: 900] XR24 of length 3
+DEBUG from aquamarine ]: drm: Modesetting VGA-1 with 1600x900@59.98Hz
+DEBUG from aquamarine ]: Supported EGL client extensions: (15) EGL_EXT_device_base EGL_EXT_device_enumeration EGL_EXT_device_query EGL_EXT_platform_base EGL_KHR_client_get_all_proc_addresses EGL_EXT_client_extensions EGL_KHR_debug EGL_EXT_platform_device EGL_EXT_platform_wayland EGL_KHR_platform_wayland EGL_EXT_platform_x11 EGL_KHR_platform_x11 EGL_MESA_platform_xcb EGL_MESA_platform_gbm EGL_KHR_platform_gbm EGL_MESA_platform_surfaceless
+DEBUG from aquamarine ]: CDRMRenderer(drm): Using device /dev/dri/card0
+DEBUG from aquamarine ]: CDRMRenderer: EXT_create_context_robustness supported, requesting lose on reset
+ERR from aquamarine ]: [EGL] Command eglCreateContext errored out with EGL_BAD_ATTRIBUTE (0x12292): eglCreateContext
+ERR from aquamarine ]: CDRMRenderer: eglCreateContext failed with GLES 3.2, retrying GLES 3.0
+ERR from aquamarine ]: [EGL] Command eglCreateContext errored out with EGL_BAD_ATTRIBUTE (0x12292): eglCreateContext
+ERR from aquamarine ]: CDRMRenderer: Can't create renderer, eglCreateContext failed with both GLES 3.2 and GLES 3.0
+ERR from aquamarine ]: drm: initMgpu: no renderer
+ERR from aquamarine ]: drm: Failed to update renderer state for VGA-1 on applyCommit
+ERR from aquamarine ]: [EGL] Command eglMakeCurrent errored out with EGL_BAD_DISPLAY (0x12296): eglMakeCurrent
+DEBUG from aquamarine ]: Supported EGL client extensions: (15) EGL_EXT_device_base EGL_EXT_device_enumeration EGL_EXT_device_query EGL_EXT_platform_base EGL_KHR_client_get_all_proc_addresses EGL_EXT_client_extensions EGL_KHR_debug EGL_EXT_platform_device EGL_EXT_platform_wayland EGL_KHR_platform_wayland EGL_EXT_platform_x11 EGL_KHR_platform_x11 EGL_MESA_platform_xcb EGL_MESA_platform_gbm EGL_KHR_platform_gbm EGL_MESA_platform_surfaceless
+DEBUG from aquamarine ]: CDRMRenderer(drm): Using device /dev/dri/card0
+DEBUG from aquamarine ]: CDRMRenderer: EXT_create_context_robustness supported, requesting lose on reset
+ERR from aquamarine ]: [EGL] Command eglCreateContext errored out with EGL_BAD_ATTRIBUTE (0x12292): eglCreateContext
+ERR from aquamarine ]: CDRMRenderer: eglCreateContext failed with GLES 3.2, retrying GLES 3.0
+ERR from aquamarine ]: [EGL] Command eglCreateContext errored out with EGL_BAD_ATTRIBUTE (0x12292): eglCreateContext
+ERR from aquamarine ]: CDRMRenderer: Can't create renderer, eglCreateContext failed with both GLES 3.2 and GLES 3.0
+ERR from aquamarine ]: drm: initMgpu: no renderer
+ERR from aquamarine ]: drm: Failed to update renderer state for VGA-1 on applyCommit
+ERR from aquamarine ]: [EGL] Command eglMakeCurrent errored out with EGL_BAD_DISPLAY (0x12296): eglMakeCurrent
+ERR from aquamarine ]: [EGL] Command eglMakeCurrent errored out with EGL_BAD_DISPLAY (0x12296): eglMakeCurrent
+DEBUG from aquamarine ]: GBM: Automatically selected format AR24 for new GBM buffer
+DEBUG from aquamarine ]: GBM: Allocated a new buffer with size [Vector2D: x: 256, y: 256] and format AR24 with modifier 0x0 : LINEAR
+DEBUG from aquamarine ]: GBM: Automatically selected format AR24 for new GBM buffer
+DEBUG from aquamarine ]: GBM: Allocated a new buffer with size [Vector2D: x: 256, y: 256] and format AR24 with modifier 0x0 : LINEAR
+DEBUG from aquamarine ]: Swapchain: Reconfigured a swapchain to [Vector2D: x: 256, y: 256] AR24 of length 2
+ERR from aquamarine ]: [EGL] Command eglMakeCurrent errored out with EGL_BAD_DISPLAY (0x12296): eglMakeCurrent
+ERR from aquamarine ]: [EGL] Command eglCreateImageKHR errored out with EGL_NOT_INITIALIZED (0x12289): _eglCreateImageCommon
+ERR from aquamarine ]: [EGL] Command eglMakeCurrent errored out with EGL_BAD_DISPLAY (0x12296): eglMakeCurrent
