@@ -1,0 +1,57 @@
+Welcome to Hyprland!
+
+                                                  
+                     YY    UJ                     
+                    YYY    UUJ                    
+                   XXXY    UUUU                   
+                  zXXXX    UUUUU                  
+                zzzzX        UUUUJ                
+               cczzz          UUUUJ               
+             vccccz            UUUUUJ             
+            vvcccc              UUUUUJ            
+           vvvvv                  UUUUJ           
+          uuuvv                    UUUUJ          
+         uuuuu                      UUUUU         
+        nnnuu                        UUUUU        
+       nnnnn                          YUUUU       
+       xxnn                            YUUU       
+       xxxn                            YYUU       
+      xxxx                              YYUU      
+      rxxx                              YYYY      
+      rrrx                              YYYY      
+       rrrx                            XXXY       
+       rrrr                            XXXX       
+        rrrr                          zzXX        
+         rrrr                        zzzz         
+          rrrrr                    ccczz          
+           rrrrrx                vccccc           
+             rrrrxxxx        uuvvvvvc             
+                rrxxxxxxnnnnuuuuuv                
+                    xxxxxnnnnu                    
+
+
+
+DEBUG ]: Old rlimit: soft -> 1024, hard -> 524288
+DEBUG ]: New rlimit: soft -> 524288, hard -> 524288
+DEBUG ]: Creating the EventLoopManager!
+DEBUG ]: Creating the KeybindManager!
+DEBUG ]: Creating the AnimationManager!
+DEBUG ]: Creating the DynamicPermissionManager!
+DEBUG ]: Creating the ConfigManager!
+DEBUG ]: [cfg] Regular config at /home/superb00y/.config/hypr/hyprland.conf
+DEBUG ]: [cfg] Lua config not found, using legacy config at /home/superb00y/.config/hypr/hyprland.conf
+DEBUG ]: Using config: /home/superb00y/.config/hypr/hyprland.conf
+DEBUG ]: !!!!HEY YOU, YES YOU!!!!: further logs to stdout / logfile are disabled by default. BEFORE SENDING THIS LOG, ENABLE THEM. Use debug:disable_logs = false to do so: https://wiki.hypr.land/Configuring/Basics/Variables/#debug
+DEBUG ]: Creating the Error Overlay!
+DEBUG ]: Creating the LayoutManager!
+DEBUG ]: Creating the TokenManager!
+DEBUG ]: Using config: /home/superb00y/.config/hypr/hyprland.conf
+ERR ]: Invalid dispatcher: togglesplit
+DEBUG ]: Disabling stdout logs! Check the log for further logs.
+DEBUG ]: Creating the PointerManager!
+DEBUG ]: Creating the EventManager!
+DEBUG ]: Creating the AsyncResourceGatherer!
+Hyprland has crashed :( Consult the crash report at /home/superb00y/.cache/hyprland/hyprlandCrashReport24307.txt for more information.
+[1;31mERR [0mfrom start-hyprland ]: Couldn't waitpid for hyprland: No child processes
+[1;32mDEBUG [0mfrom start-hyprland ]: hyprland exit, breaking poll, checking state
+[1;32mDEBUG [0mfrom start-hyprland ]: Hyprland exit cleanly.
