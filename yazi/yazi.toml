@@ -30,7 +30,7 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 
 [opener]
 edit = [
-  { run = "helix %s", desc = "$EDITOR", block = true, for = "unix" },
+  { run = "hx %s", desc = "$EDITOR", block = true, for = "unix" },
 ]
 
 play = [
